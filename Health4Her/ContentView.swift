@@ -1,21 +1,24 @@
 //
 //  ContentView.swift
-//  Health4Her
+//  AppDevFinalProjectTemplate
 //
-//  Created by Scholar on 8/4/23.
+//  Created by Scholar on 7/31/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            HomeView()
+                .tabItem{
+                    Label("Body", systemImage: "person")
+                }
+            ResourceView()
+                .tabItem{
+                    Label("More Info", systemImage: "book")
+                }
         }
-        .padding()
     }
 }
 
